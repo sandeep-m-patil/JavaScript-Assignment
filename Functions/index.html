@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+
+<body>
+    <h1>Hello JavaScript Functions!</h1>
+    <script>
+        function greet() {
+            console.log("Hello there!");
+        }
+        greet();
+
+        function greetUser(name) {
+            console.log("Hello, " + name + "!");
+        }
+        greetUser("Sandeep");
+        greetUser("John");
+        greetUser("Doe");
+
+        function addNumbers(num1, num2) {
+            let sum = num1 + num2;
+            console.log("The sum of " + num1 + " and " + num2 + " is: " + sum);
+        }
+        addNumbers(5, 10);
+        addNumbers(20, 30);
+        addNumbers(100, 200);
+
+        function multiplyNumbers(a, b) {
+            let result = a * b;
+            return result;
+        }
+
+        let product = multiplyNumbers(5, 10);
+        console.log("The product of 5 and 10 is: " + product);
+
+        // Function Expression
+        const sayHello = function () {
+            console.log("Hello there!");
+        };
+
+        // Calling the function
+        sayHello();
+
+    </script>
+</body>
+
+</html>

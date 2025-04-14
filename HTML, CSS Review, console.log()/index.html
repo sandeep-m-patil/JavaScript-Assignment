@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS, and Console</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .message {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main-title">Welcome JavaScript HTML, CSS, and Console!</h1>
+    <p class="message">This is a sample paragraph.</p>
+
+    <script>
+        console.log("The page has loaded!");
+        let titleElement = document.getElementById("main-title");
+        console.log("Title element:", titleElement);
+        let messageElements = document.getElementsByClassName("message");
+        console.log("Message elements:", messageElements); 
+    </script>
+</body>
+
+</html>
