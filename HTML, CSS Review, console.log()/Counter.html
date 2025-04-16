@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Counter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .counter-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .display-area {
+            font-size: 72px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0;
+            transition: all 0.2s ease;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            padding: 12px 0;
+            width: 140px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .decrement {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .decrement:hover {
+            background-color: #c0392b;
+        }
+
+        .increment {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .increment:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="counter-container">
+        <h1>Simple Counter</h1>
+        <div id="display" class="display-area">0</div>
+        <div class="buttons">
+            <button id="decrementBtn" class="decrement">Decrement</button>
+            <button id="incrementBtn" class="increment">Increment</button>
+        </div>
+    </div>
+
+    <script src="Counter.js"></script>
+</body>
+
+</html>
