@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Authentication Test</title>
+  <link rel="stylesheet" href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css">
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .login-box { margin-bottom: 20px; }
+    label { display: block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>Login Form</h2>
+  <div class="login-box">
+    <label>Username:
+      <input type="text" id="username" />
+    </label>
+    <label>Password:
+      <input type="password" id="password" />
+    </label>
+    <button onclick="handleLogin()">Login</button>
+    <p id="message"></p>
+  </div>
+
+  
+
+
+
+ 
+  <!-- Jasmine Specs -->
+<script src="login.js"></script>
+  
+</body>
+</html>
