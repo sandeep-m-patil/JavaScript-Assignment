@@ -54,7 +54,13 @@ In short:
 ### The Puzzle: Consider the following user object with a method that uses setTimeout
 
 - In JavaScript, the value of this can change depending on the context. In regular functions, this refers to the global object inside callbacks like setTimeout, leading to unexpected results (e.g., undefined instead of the object’s property).
- 
+
 - To fix this, we can either store this in a variable (like self) or use bind() to explicitly set the correct context. 
 
--A simpler and more modern solution is to use arrow functions, which automatically capture this from their surrounding context, ensuring it always refers to the correct object.
+- A simpler and more modern solution is to use arrow functions, which automatically capture this from their surrounding context, ensuring it always refers to the correct object.
+
+
+### Part 3: The Power of Closures - Maintaining State
+### The Puzzle: Predict the output of the following code:
+
+
