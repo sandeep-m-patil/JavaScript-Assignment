@@ -22,8 +22,11 @@
 
 -A cleaner and more modern fix is shown in delayedGreeterLet, where let is used instead of var. Since let is block-scoped, it automatically creates a fresh i value for each loop cycle.
 
+
+## Section 2
+
 ### Part 1: Variable Scope and Hoisting - The Case of the Missing Declaration
-### The Puzzle: Examine the following code and predict the output:
+### The Puzzle: Examine the following code and predict the output
 
 #### Rewritting code using `let`
 
@@ -46,3 +49,12 @@ In short:
 - However, `let` and `const` are also hoisted, but they are not automatically given a value. Until the line where they are declared, they are in a special state called the Temporal Dead Zone (TDZ). If you try to use them before the declaration, you'll get a `ReferenceError`.
 
 - Also, `const` must be given a value when it's declared, while let does not need an immediate value. These rules help avoid common bugs like using a variable too early before it’s properly set.
+
+### Part 2: The Perils of this - Object Methods and Arrow Functions
+### The Puzzle: Consider the following user object with a method that uses setTimeout
+
+- In JavaScript, the value of this can change depending on the context. In regular functions, this refers to the global object inside callbacks like setTimeout, leading to unexpected results (e.g., undefined instead of the object’s property).
+ 
+- To fix this, we can either store this in a variable (like self) or use bind() to explicitly set the correct context. 
+
+-A simpler and more modern solution is to use arrow functions, which automatically capture this from their surrounding context, ensuring it always refers to the correct object.

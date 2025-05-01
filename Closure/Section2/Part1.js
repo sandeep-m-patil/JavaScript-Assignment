@@ -1,3 +1,6 @@
+// Part 1: Variable Scope and Hoisting - The Case of the Missing Declaration
+// The Puzzle: Examine the following code and predict the output:
+
 
 console.log(mysteryVariable);
 let mysteryVariable = 10;
