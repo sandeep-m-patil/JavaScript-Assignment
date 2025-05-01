@@ -1,3 +1,6 @@
+// Problem 2: The Delayed Greeter (Incorrect Assumption about Variable Scope) 
+// Imagine we want to create a function delayedGreeter that takes an array of names and, after a delay, greets each name. 
+
 function delayedGreeter(names) {
     for (var i = 0; i < names.length; i++) {
       setTimeout(function() {

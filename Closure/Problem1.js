@@ -1,3 +1,6 @@
+// Problem 1: The Persistent Counter (Initial Incorrect Attempt)
+// Our goal is to create a function createCounter that, when called, returns a new function. This returned function, when invoked, should increment and return a counter.
+
 function createCounter() {
   let count = 0;
 
