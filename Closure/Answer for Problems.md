@@ -14,10 +14,10 @@
 ### Problem 2: The Delayed Greeter (Incorrect Assumption about Variable Scope) 
 ### Imagine we want to create a function delayedGreeter that takes an array of names and, after a delay, greets each name. 
 
-- In the original delayedGreeter function, the problem happens because var doesn’t create a new value of i for each loop — it shares the same one. 
 
-- So when the setTimeout runs after the loop finishes, it tries to use names[3], which doesn’t exist, so it prints undefined. The corrected version uses a trick called an IIFE (a function that runs right away) to save the current value of i each time through the loop. 
+- In the delayedGreeter function, the output is incorrect because it uses var in the loop. 
+- Since var is function-scoped, all setTimeout callbacks end up sharing the same value of i, which becomes 3 after the loop ends. As a result, the function tries to access names[3], which doesn't exist, and prints undefined. 
 
-- This way, each setTimeout remembers the right name to print. In modern JavaScript, you can simply use let instead of var, which fixes the problem without needing that trick, because let creates a new value of i for each loop. 
+- To fix this, the delayedGreeterCorrected version uses an IIFE (Immediately Invoked Function Expression) to create a new scope for each loop iteration, capturing the current value of i as index, so each setTimeout works with the correct name. 
 
-- This shows how closures help functions remember values even after the loop is done.
+-A cleaner and more modern fix is shown in delayedGreeterLet, where let is used instead of var. Since let is block-scoped, it automatically creates a fresh i value for each loop cycle.
