@@ -1,3 +1,5 @@
+## Section 1
+
 ### Problem 1: The Persistent Counter (Initial Incorrect Attempt)
 ### Our goal is to create a function createCounter that, when called, returns a new function. This returned function, when invoked, should increment and return a counter.
 
@@ -113,9 +115,34 @@ In short:
   - In this example, the multiply function multiplies two numbers, and processArguments passes the arguments 5 and 3 to it, resulting in 15.
 
 
+## Section 3 
+
+### Part 4: Objects - Properties and the Illusion of Order
+### The Puzzle: Examine the following object and predict the order in which its properties might be logged:
+
+1. Why properties are not logged in the order defined:
+
+  - In JavaScript, object properties with numeric keys (like "2", "10") are sorted in ascending numeric order, regardless of the order they were defined. The rest (non-numeric string keys like "a", "z", etc.) are kept in the insertion order.
+
+2. for...in loop behavior:
+
+  - Iterates over enumerable properties.
+
+  - Orders numeric string keys (like "2", "10") first in ascending order.
+
+  - Then follows the insertion order for string keys.
+
+3. What does Object.keys() return?
+
+  - Object.keys(obj) returns an array of an object's own enumerable property names.
+
+  - The order is same as the for...in loop, with numeric keys sorted, followed by other keys in insertion order.
 
 
+4. Example with explanation:
 
+  - Numeric keys (1, 2, 3) are listed first in ascending order.
 
+  - Then string keys (d, a, b) appear in the order defined.
 
 
