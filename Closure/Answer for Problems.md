@@ -173,17 +173,4 @@ In short:
 
 4. Challenge with Array and for...of
 
-`const arr = [10, 5, 8, 20, 3, 15, 25];
-
-  for (let i of arr) {
-    if (i > 12) {
-      console.log("Found a large number!");
-      break;
-    }
-    if (i === 5) {
-      console.log("Skipping 5!");
-      continue;
-    }
-    console.log(i);
-  }
-`
+<pre><code>```javascript const arr = [10, 5, 8, 20, 3, 15, 25]; for (let i of arr) { if (i > 12) { console.log("Found a large number!"); break; } if (i === 5) { console.log("Skipping 5!"); continue; } console.log(i); } ```</code></pre>
