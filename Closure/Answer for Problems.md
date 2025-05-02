@@ -173,8 +173,7 @@ In short:
 
 4. Challenge with Array and for...of
 
-`
-  const arr = [10, 5, 8, 20, 3, 15, 25];
+`const arr = [10, 5, 8, 20, 3, 15, 25];
 
   for (let i of arr) {
     if (i > 12) {
@@ -187,5 +186,4 @@ In short:
     }
     console.log(i);
   }
-
 `
