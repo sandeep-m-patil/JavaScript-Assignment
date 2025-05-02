@@ -77,4 +77,4 @@ In short:
 
 4.	The secret value should not be directly accessible from outside the object. Use closures to achieve this encapsulation. Demonstrate how to use createSecretHolder
 
-  - In this code, the _secret variable is not part of the returned object — it's private inside the closure. The getSecret and setSecret methods can access and modify it, but from outside, no one can directly read or change _secret. This is how closures help protect data.
+  - In this code, the hiddenSecret variable is not part of the returned object — it's private inside the closure. The getSecret and setSecret methods can access and modify it, but from outside, no one can directly read or change hiddenSecret. This is how closures help protect data.
