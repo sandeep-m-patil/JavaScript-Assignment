@@ -63,4 +63,18 @@ In short:
 ### Part 3: The Power of Closures - Maintaining State
 ### The Puzzle: Predict the output of the following code:
 
+1.	Explain in your own words what a closure is and how it enables the increment and decrement functions to maintain their respective count variables.
 
+  - A closure is a function that remembers and can use variables from the place where it was created, even after that outer function has finished running. In the setupCounter example, the increment and decrement functions keep access to the count variable, allowing them to update and remember it each time. Each time you call setupCounter, it creates a new, separate counter using this idea.
+
+2. Create a function called createGreeting that takes a greeting string as an argument. This function should return another function that takes a name string and returns the full greeting (e.g., if createGreeting("Hello") is called, the returned function, when called with "World", should return "Hello, World!"). Demonstrate its usage
+
+  - The createGreeting function returns a new function that remembers the greeting you passed in. This returned function can then be called with a name to complete the greeting. This works because of closures — the inner function "remembers" the greeting from its outer scope.
+
+3.	The Challenge: Create a function createSecretHolder(secret) that takes a secret value. It should return an object with two methods: getSecret(): Returns the secret value.	setSecret(newSecret): Updates the secret value.
+
+  - The variable hiddenSecret is not accessible outside the returned object. Only getSecret and setSecret can access or modify it, thanks to closure.
+
+4.	The secret value should not be directly accessible from outside the object. Use closures to achieve this encapsulation. Demonstrate how to use createSecretHolder
+
+  - In this code, the _secret variable is not part of the returned object — it's private inside the closure. The getSecret and setSecret methods can access and modify it, but from outside, no one can directly read or change _secret. This is how closures help protect data.
