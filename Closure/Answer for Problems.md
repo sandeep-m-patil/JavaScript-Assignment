@@ -78,3 +78,44 @@ In short:
 4.	The secret value should not be directly accessible from outside the object. Use closures to achieve this encapsulation. Demonstrate how to use createSecretHolder
 
   - In this code, the hiddenSecret variable is not part of the returned object — it's private inside the closure. The getSecret and setSecret methods can access and modify it, but from outside, no one can directly read or change hiddenSecret. This is how closures help protect data.
+
+### Part 4: Advanced Functions - Arguments and Flexibility
+### The Puzzle: Predict the output of the following function calls:
+
+1. Explain how JavaScript handles function calls with a different number of arguments than parameters
+
+  - In JavaScript, you can call a function with more or fewer arguments than it expects.
+  - If fewer arguments are passed, the missing parameters are undefined.
+  - If more arguments are passed, the extra ones are simply ignored (unless accessed using the arguments object or rest parameters).
+
+
+2. Describe the purpose and syntax of the rest parameter.
+
+  - The rest parameter (...) allows a function to collect all extra arguments into a single array.
+  - It helps in handling variable numbers of arguments cleanly.
+
+  `
+  function example(a, b, ...rest) {
+    console.log(rest); // an array of remaining arguments
+  }
+  `
+
+3. Write a function called sumAll that takes any number of arguments and returns their sum. Use the rest parameter in your implementation.
+
+  - The sumAll(...numbers) function uses the rest parameter to collect all arguments into an array and then uses reduce() to add them together. This allows it to return the sum of any number of inputs. Example: sumAll(1, 2, 3) returns 6.
+
+4.	The Challenge: Create a function processArguments that takes a primary function as its first argument and any number of additional arguments. The processArguments function should then call the primary function with all the additional arguments passed to it. Demonstrate its usage with a simple primary function (e.g., one that multiplies two numbers).
+
+  - processArguments takes a function (func) as its first argument and any number of additional arguments (...args).
+
+  - It calls the passed function (func) with the arguments spread out using ...args.
+
+  - In this example, the multiply function multiplies two numbers, and processArguments passes the arguments 5 and 3 to it, resulting in 15.
+
+
+
+
+
+
+
+
