@@ -146,3 +146,46 @@ In short:
   - Then string keys (d, a, b) appear in the order defined.
 
 
+### Part 5: Loops - Breaking Free and Skipping Steps
+### The Puzzle: Examine the following loop and predict its output:
+
+ 1. Purpose and Behavior of continue
+
+  - The continue statement skips the current iteration of the loop and moves to the next one.
+
+  - Useful when you want to ignore certain values without exiting the loop.
+
+2. Purpose and Behavior of break
+
+  - The break statement exits the loop completely.
+
+  - Useful when a certain condition is met and you don’t need to continue looping.
+
+3. Loop from 1 to 20 with continue and break
+
+  `
+  for (let i = 1; i <= 20; i++) {
+    if (i % 5 === 0) continue;       // Skip numbers divisible by 5
+    if (i > 15) break;               // Stop the loop if i > 15
+    console.log(i);
+  }
+  `
+
+4. Challenge with Array and for...of
+
+`
+  const arr = [10, 5, 8, 20, 3, 15, 25];
+
+  for (let i of arr) {
+    if (i > 12) {
+      console.log("Found a large number!");
+      break;
+    }
+    if (i === 5) {
+      console.log("Skipping 5!");
+      continue;
+    }
+    console.log(i);
+  }
+
+`
